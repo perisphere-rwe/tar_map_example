@@ -3,7 +3,7 @@
 #' @param path character; path to "report.Rmd".
 #' @param analysis_type character; one of the analysis types that defines
 #'   targets created by `tar_map()`.
-#' @param title_end character; optional textl added to the end of the report
+#' @param title_end character; optional text added to the end of the report
 #'   title, such as " - Main".
 #'
 #' @details The report located at `path` serves as a template that is used to

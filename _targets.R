@@ -63,23 +63,13 @@ tar_plan(
   tar_render(
     name = report_main,
     path = .rmd_file_main,
-    output_file = paste0("report", "-v", version_major, "/",
-                         sub("\\.Rmd", "", basename(.rmd_file_main)),
-                         "-", basename(here()),
-                         "-v", version_major,
-                         "-",  version_minor,
-                         ".docx")
+    output_file = format_output_report_name(.rmd_file_main, ext = ".docx")
   ),
 
   tar_render(
     name = report_sens,
     path = .rmd_file_sens,
-    output_file = paste0("report", "-v", version_major, "/",
-                         sub("\\.Rmd", "", basename(.rmd_file_sens)),
-                         "-", basename(here()),
-                         "-v", version_major,
-                         "-",  version_minor,
-                         ".docx")
+    output_file = format_output_report_name(.rmd_file_sens, ext = ".docx")
   )
 
 ) %>%
