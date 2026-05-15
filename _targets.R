@@ -34,7 +34,7 @@ for (i in seq_len(nrow(analysis_plan))) {
   rmd_file <- modify_report(
     path = here::here("report/report.Rmd"),
     analysis_type = analysis_type,
-    title_end = analysis_plan$.title_end[i]
+    title_suffix = analysis_plan$.title_end[i]
   )
 
   # Paths that will be used to render reports
