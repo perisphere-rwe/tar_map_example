@@ -1,5 +1,5 @@
 ---
-title: "Perisphere Template: Results Report"
+title: "Perisphere Template: Results Report - Main Analysis"
 subtitle: "Start here when making deliverables with MS Word"
 author: "[Byron C. Jaeger, PhD](https://www.byronjaeger.com/)"
 date: "Document created on `r format(Sys.time(), '%B %d, %Y')`" 
@@ -158,7 +158,7 @@ page_wide_above <- function(margins = make_margin('narrow')){
 withr::with_dir(
   new = here::here(),
   code = {
-    targets::tar_load(names = c(characteristics_analysis_type))
+    targets::tar_load(names = c(characteristics_main))
   }
 )
 
@@ -216,5 +216,5 @@ abbrvs_write <- function(abbr){
 ## Table 1: Characteristics
 
 ```{r}
-characteristics_analysis_type
+characteristics_main
 ```
